@@ -14,7 +14,12 @@
  *= require_self
  */
 
-/* Bootstrap einbinden */
+/* Font-Awesome einbinden mit gem */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+/* Bootstrap einbinden mit gem*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 

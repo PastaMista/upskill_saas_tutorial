@@ -28,6 +28,9 @@ gem 'jbuilder', '2.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#Font-Awesome sass gem
+gem 'font-awesome-sass', '4.6.2'
+
 #Bootstrap Bibliothek Nutzung
 gem "bootstrap-sass", "3.3.7"
 
