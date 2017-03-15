@@ -22,6 +22,7 @@ h1, h2, h3 {
   font-family: "Open Sans", sans-serif;
 }
 
+//Homepage Styles
 .navbar, .home-callout {
   //Gradient provided by @_ighosh uiGradient.com    //geht nur mit sass
   background: #e96443; /* fallback for old browsers */
@@ -30,29 +31,20 @@ h1, h2, h3 {
 }
 
 
-
+//Nav styles
 .navbar {
   border: none;
-  
 }
 
-.navbar-default .navbar-brand {
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a  {
   color: white;
+  &:hover{      //in sass kann man Regeln verschachteln
+    color: white;
+    opacity: 0.75;
+  }
 }
 
-.navbar-default .navbar-nav > li > a {
-  color: white;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: white;
-  opacity: 0.75;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: white;
-  opacity: 0.75;
-}
 
 .home-callout {
   color: white;
