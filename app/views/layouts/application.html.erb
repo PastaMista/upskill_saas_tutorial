@@ -20,11 +20,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="/" class="navbar-brand"><i class="fa fa-calendar"></i></i> DevMatch</a>  <!-- link auf Hauptseite + Icon von Font Awesome-->
+        <%= link_to "/", class: "navbar-brand" do %>     <!-- link auf Hauptseite + Icon von Font Awesome-->
+          <i class="fa fa-calendar"></i>
+          Kappa
+        <% end %>
       </div>
       <div class="collapse navbar-collapse" id="main-nav-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/about">About</a></li>  <!-- Link auf About Seite !-->
+          <li><%= link_to "About", "/about" %></li>      <!-- Link auf About Seite !-->
         </ul>
       </div><!-- /.navbar-collapse -->
     </div>
