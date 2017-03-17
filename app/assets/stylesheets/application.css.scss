@@ -27,6 +27,20 @@ h1, h2, h3 {
   font-family: "Open Sans", sans-serif;
 }
 
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {                  //verschachtelt mit sass
+  background-color: #904e95;
+  }
+}
+
+
 //Homepage Styles
 .navbar, .home-callout {
   //Gradient provided by @_ighosh uiGradient.com    //geht nur mit sass
