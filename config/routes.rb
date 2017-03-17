@@ -2,5 +2,5 @@
 Rails.application.routes.draw do
  root to: "pages#home"
  get "about", to: "pages#about"  #über get request in Adresszeile (/about) gelangt man zur About page, wenn get "about" wird pages controller aufgerufen und auf about geleitet
- resources :contacts    #shortcut für: get "contacts/new", to "contacts#new"
+ resources :contacts    #shortcut für: get "contacts/new", to "contacts#new"   erstellt einige Routen "rails routes" im Terminal 
 end
