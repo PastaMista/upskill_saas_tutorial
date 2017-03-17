@@ -2,4 +2,5 @@
 Rails.application.routes.draw do
  root to: "pages#home"
  get "about", to: "pages#about"  #über get request in Adresszeile (/about) gelangt man zur About page
+ resources :contacts
 end
