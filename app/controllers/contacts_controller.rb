@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
   
   def new  #schaut in views nach einer "new" Datei
-    @contact = Contact.new    # "@" = Instanz Variable. Immer wenn contact/new aufgerufen wird, wird ein neues Objekt erstellt (hier leeres Objekt mit name: , email: , kommentar: )
+    @contact = Contact.new    # "@" = Instanz Variable. Immer wenn contact/new aufgerufen wird, wird ein neues Objekt erstellt (hier leeres Objekt mit name: , email: , kommentar: ) Contact aus dem zugehörigen Model
   end
   
   def create    #deafult Funktion, um Sachen in DB zu speichern

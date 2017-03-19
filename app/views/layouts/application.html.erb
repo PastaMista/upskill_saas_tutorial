@@ -38,7 +38,7 @@
      <!-- Flash Nachricht ins Layout packen, damit die Nachricht auch erscheint, wenn man nicht auf die Contact Seite zurück geleitet wird, sondern wenn man auf z.B eine "Danke für ihre NAchricht" Seite etc weiterleietet -->
     <div class="container"> 
     <% flash.each do |type, msg| %>
-      <%= content_tag :div, msg, class:"alert alert-#{type}" %>   <!-- loopt durch alle hashes, type=key und msg=value. Im Erfolgsfall heißt das Hash success und dieser Key wird daann in der class eingesetzt. um die Bootstrap Klasse aufzurufen-->
+      <%= content_tag :div, msg, class:"alert alert-#{type}" %>   <!-- loopt durch alle hashes, type=key und msg=valu. Im Erfolgsfall heißt das Hash success und dieser Key wird daann in der class eingesetzt. um die Bootstrap Klasse aufzurufen-->
     <% end %>
     </div>
     <%= yield %>
