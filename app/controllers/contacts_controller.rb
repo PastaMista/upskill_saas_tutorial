@@ -7,9 +7,11 @@ class ContactsController < ApplicationController
   def create    #deafult Funktion, um Sachen in DB zu speichern
     @contact = Contact.new(contact_params)   #{name: "Bob", email:"das@a.de", kommentar: "aksdkm"}
     if @contact.save  #wenn Speicherung erfolgreich
-      redirect_to new_contact_path, notice: "Kommentar gesendet"
+      flash[:success] = "Nachricht gesendet! :)"
+      redirect_to new_contact_path
     else
-      redirect_to new_contact_path, notice: "Error K4pp4"
+      flash[:error] = @contact.errors.full_messages.join(", ")   #.errors ist eine default error funktion, full.messages.join(", ") gibt daten aus Objekt wieder Name can't be blank, Email can't be blank, Kommentar can't be blank
+      redirect_to new_contact_path
     end
   end
   
