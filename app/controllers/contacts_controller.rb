@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       flash[:success] = "Nachricht gesendet! :)"
       redirect_to new_contact_path
     else
-      flash[:error] = @contact.errors.full_messages.join(", ")   #.errors ist eine default error funktion, full.messages.join(", ") gibt daten aus Objekt wieder Name can't be blank, Email can't be blank, Kommentar can't be blank
+      flash[:danger] = @contact.errors.full_messages.join(", ")   #.errors ist eine default error funktion, full.messages.join(", ") gibt daten aus Objekt wieder Name can't be blank, Email can't be blank, Kommentar can't be blank
       redirect_to new_contact_path
     end
   end
