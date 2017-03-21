@@ -7,6 +7,13 @@ class ContactsController < ApplicationController
   def create    #deafult Funktion, um Sachen in DB zu speichern
     @contact = Contact.new(contact_params)   #{name: "Bob", email:"das@a.de", kommentar: "aksdkm"}
     if @contact.save  #wenn Speicherung erfolgreich
+      
+      #parameter aus Kontaktanfrage werden an Mailer übergeben
+      name = params[:contact][:name]  
+      email = params[:contact][:email]
+      body = params[:contact][:kommentar]
+      ContactMailer.contact_email(name, email, body).deliver #Mail wird geschickt
+      
       flash[:success] = "Nachricht gesendet! :)"  #succes ist der key, und danach dann die Message (Pair)
       redirect_to new_contact_path
     else
