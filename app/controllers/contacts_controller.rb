@@ -1,14 +1,17 @@
 class ContactsController < ApplicationController
   
+  #GET request zu /contact-us
   def new  #schaut in views nach einer "new" Datei
     @contact = Contact.new    # "@" = Instanz Variable. Immer wenn contact/new aufgerufen wird, wird ein neues Objekt erstellt (hier leeres Objekt mit name: , email: , kommentar: ) Contact aus dem zugehörigen Model
   end
   
+  #POST request /contacts
   def create    #deafult Funktion, um Sachen in DB zu speichern
     @contact = Contact.new(contact_params)   #{name: "Bob", email:"das@a.de", kommentar: "aksdkm"}
-    if @contact.save  #wenn Speicherung erfolgreich
+    if @contact.save  #wenn Speicherung erfolgreich in Datenabnk
       
       #parameter aus Kontaktanfrage werden an Mailer übergeben
+      #Variablen werden mit Daten aus params befüllt
       name = params[:contact][:name]  
       email = params[:contact][:email]
       body = params[:contact][:kommentar]
@@ -23,6 +26,7 @@ class ContactsController < ApplicationController
   end
   
   private
+    #Sammelt daten aus Form
     def contact_params
       params.require(:contact).permit(:name, :email, :kommentar)   #rails strong parameters 
     end
