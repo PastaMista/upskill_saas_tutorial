@@ -1,4 +1,4 @@
-<%= form_for @profile, url: user_profile_path do |f| %>
+<%= form_for @profile, url: user_profile_path do |f| %>  <!--  url stellt sicher, dass man den path so spezifiziert, dass nur der Besitzer User Zugriff auf sein Profil hat (Ist die POST create route -->
   <div class="form-group">
     <%= f.label :first_name %>
     <%= f.text_field :first_name, class: "form-control" %>
