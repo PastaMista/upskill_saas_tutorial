@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
     # GET to /users/:user_id/profile/new
     def new
-      #render blank profile details form
+      @profile = Profile.new    #wenn Seite aufgerufen wird, wird eine leere Liste für ein Profil erstellt
     end
 end
