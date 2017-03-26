@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
       #User wird ermittelt
       @user = User.find(params[:user_id])
       #Profile wird erstellt und mit User verknüpft
-      @profile = @user.build_profile( profile_params )
+      @profile = @user.build_profile( profile_params )  #build_profile wird bei verbunden Datenbasen genutzt, erstellt für einen die Verknüpfung, in diesem Fall verbindet die eine user_id mit einem Profil 
       if @profile.save
         flash[:success] = "Profil geuuuuuupdatet"
         redirect_to root_path
