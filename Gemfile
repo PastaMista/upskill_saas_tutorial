@@ -40,6 +40,9 @@ gem "hirb", "0.7.3"
 #Devise for user memberships/authenticatiob
 gem "devise", "4.2.0"
 
+#use Paperclip for img upload
+gem "paperclip", "4.3.6"
+
 
 
 group :development, :test do
