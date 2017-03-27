@@ -1,6 +1,27 @@
-<!-- user.profile kann man machen, weil man sie in Beziehung zueinander stehen -->
-<%= image_tag @user.profile.avatar.url %>
-<%= @user.profile.first_name %> <!-- .inspect zeigt alle Attribute des objekts --> 
-<%= @user.profile.last_name %>
-<%= @user.profile.job %>
-<%= @user.profile.description %>
+<div class="container">
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <%= image_tag @user.profile.avatar.url, class: "avatar-show-img" %>  
+      </div>
+      
+      <div class="col-md-6">
+        <!-- user.profile kann man machen, weil man sie in Beziehung zueinander stehen --> 
+        <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1> <!-- .inspect zeigt alle Attribute des objekts --> 
+        <h3><%= @user.profile.job %></h3>
+        <div class="well profile-block profile-description">
+          <h3>Decsription</h3>
+          <%= @user.profile.description %>
+        </div>
+        
+        <div class="well profile-block profile-contact-info">
+          <h3>Contact</h3>
+          <%= @user.profile.phone_number %><br/>
+          <%= @user.profile.contact_email %><br/>
+        </div>
+        
+      </div>
+       
+    </div>
+
+</div>
+
